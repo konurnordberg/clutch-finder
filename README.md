@@ -1,8 +1,10 @@
 # Clutch Finder
 
+**[Open the live app](https://konur-clutch-finder.streamlit.app/)** · [GitHub repository](https://github.com/konurnordberg/clutch-finder)
+
 Describe an NFL play in your own words and find matching moments from the **2024-season playoffs (played January–February 2025)**. Each result includes the original play description, possession team, game date, quarter, clock, score margin, and source identifiers. This is semantic text retrieval, not a chatbot or video search.
 
-Try “a quarterback scrambling for a touchdown,” “an interception returned for a touchdown,” or “a sack that forces a fumble.” Filter by possession team and quarter, or select **Late & close**: Q4/OT, at most 5 minutes remaining in that quarter, and a pre-play score margin within 8 points. The possession-team filter refers to the offense, including on interceptions.
+Try “a quarterback scrambling,” “an interception returned for a touchdown,” or “a sack that forces a fumble.” Filter by possession team and quarter, or select **Late & close**: Q4/OT, at most 5 minutes remaining in that quarter, and a pre-play score margin within 8 points. The possession-team filter refers to the offense, including on interceptions.
 
 ## Run locally
 
@@ -43,7 +45,7 @@ Do not commit `chromadb-backup/`. The builder deliberately refuses to replace a 
 4. Under advanced settings choose **Python 3.12**, then deploy on the free Community Cloud tier.
 5. Run an example search after the build completes and copy the live app URL.
 
-No secrets, paid API, or Hugging Face account are required. The model downloads publicly on first search. The committed database avoids re-embedding data on the hosting machine. Application tests were run locally with Python 3.10; cloud runtime validation should be performed after deployment. CPU-only PyTorch wheels are selected on Linux to avoid unnecessary CUDA downloads.
+No secrets, paid API, or Hugging Face account are required. The model downloads publicly on first search. The committed database avoids re-embedding data on the hosting machine. Application tests pass locally with Python 3.10; live search was also verified on Streamlit Community Cloud with Python 3.12.16. CPU-only PyTorch wheels are selected on Linux to avoid unnecessary CUDA downloads.
 
 ## Validation
 
