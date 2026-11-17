@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.cache/
+data/raw/
+.env
+.DS_Store
+chromadb/*-shm
+chromadb/*-wal
+
+chromadb-backup/
+
+.streamlit/secrets.toml

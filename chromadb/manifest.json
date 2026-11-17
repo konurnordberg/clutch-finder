@@ -1,0 +1,28 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "season": 2024,
+  "season_type": "POST",
+  "embedding_strategy": "Normalized blend: 65% recorded outcome-label embedding + 35% full passage embedding",
+  "chunks": 1948,
+  "games": 13,
+  "plays": 1948,
+  "teams": [
+    "BAL",
+    "BUF",
+    "DEN",
+    "DET",
+    "GB",
+    "HOU",
+    "KC",
+    "LA",
+    "LAC",
+    "MIN",
+    "PHI",
+    "PIT",
+    "TB",
+    "WAS"
+  ],
+  "source": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2024.parquet",
+  "source_sha256": "3fd2896bc0b911b615142d2f1fabae54a4bbba5ab7b73b28187b118ef8af6a3b",
+  "chunking": "Focal play with recorded event labels; 230-token windows with 30-token overlap. Previous same-drive play retained as display-only metadata."
+}
